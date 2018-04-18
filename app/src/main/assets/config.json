@@ -1,0 +1,86 @@
+{
+  "Mainboard": {
+    "Id": "mainboard",
+    "verdor": "爱都软件部",
+    "name": "MainBoard",
+    "Version": "1.0",
+    "Developer": "lijianbin",
+    "phone": "15521060780",
+    "email": "ligb@idoosmart.com",
+    "Controller": "MainActivity",
+    "project":"VeryFitPlus"
+  },
+  "Bus" : {
+    "Id": "bus",
+    "verdor": "爱都软件部",
+    "name": "Bus",
+    "Version": "1.0",
+    "Developer": "lijianbin",
+    "phone": "15521060780",
+    "email": "ligb@idoosmart.com"
+  },
+  "Controllers": [
+
+  ],
+  "Fragments": [],
+
+  "Presenters": [
+    {
+      "Id": "com.aidu.veryfitplus.presenter.LoginPresenter",
+      "Clazz": "com.aidu.veryfitplus.presenter.LoginPresenter"
+    },
+    {
+
+      "Id": "com.aidu.odmframework.presenter.AccoutManagerPresenter",
+      "Clazz": "com.aidu.odmframework.presenter.AccoutManagerPresenter"
+    },
+    {
+      "Id": "com.aidu.odmframework.presenter.DeviceConfigPresenterCard",
+      "Clazz": "com.aidu.odmframework.presenter.DeviceConfigPresenterCard"
+    },
+    {
+      "Id": "com.aidu.odmframework.presenter.DeviceBindPresenterCard",
+      "Clazz": "com.aidu.odmframework.presenter.DeviceBindPresenterCard"
+    }
+  ,
+    {
+      "Id": "com.aidu.odmframework.presenter.DeviceSynchPresenterCard",
+      "Clazz": "com.aidu.odmframework.presenter.DeviceSynchPresenterCard"
+    }
+  ,
+    {
+      "Id": "com.aidu.odmframework.presenter.UserPresenterCard",
+      "Clazz": "com.aidu.odmframework.presenter.UserPresenterCard"
+    }
+  ,
+    {
+      "Id": "com.aidu.veryfitplus.presenter.MainDataPresenter",
+      "Clazz": "com.aidu.veryfitplus.presenter.MainDataPresenter"
+    }
+  ,
+    {
+      "Id": "com.aidu.veryfitplus.presenter.StepPresenterCard",
+      "Clazz": "com.aidu.veryfitplus.presenter.StepPresenterCard"
+    }
+  ,
+    {
+      "Id": "com.aidu.veryfitplus.presenter.HeartRatePresenterCard",
+      "Clazz": "com.aidu.veryfitplus.presenter.HeartRatePresenterCard"
+    }
+  ,
+    {
+      "Id": "com.aidu.veryfitplus.presenter.SleepPresenterCard",
+      "Clazz": "com.aidu.veryfitplus.presenter.SleepPresenterCard"
+    }
+  ,
+    {
+      "Id": "com.aidu.odmframework.presenter.WeatherPresenterCard",
+      "Clazz": "com.aidu.odmframework.presenter.WeatherPresenterCard"
+    }
+  ,
+    {
+      "Id": "com.aidu.odmframework.presenter.SportRunPresenterCard",
+      "Clazz": "com.aidu.odmframework.presenter.SportRunPresenterCard"
+    }
+  ]
+}

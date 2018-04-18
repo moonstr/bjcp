@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="viewTitle">
+        <attr name="mTitle" format="string" />
+        <attr name="mLeftText" format="string" />
+        <attr name="mRightText" format="string" />
+        <attr name="mShowLeft" format="boolean" />
+        <attr name="mTitleColor" format="color" />
+        <attr name="mTitleSize" format="integer" />
+        <attr name="mLeftTextColor" format="color" />
+        <attr name="mTitleLeftImage" format="reference" />
+        <attr name="mRightTextColor" format="color" />
+        <attr name="mRightImage" format="reference" />
+        <attr name="mRightImageOfRightTextView" format="reference" />
+        <attr name="mShowBottomLine" format="boolean" />
+        <attr name="mTitleLayoutBgColor" format="color" />
+    </declare-styleable>
+
+</resources>

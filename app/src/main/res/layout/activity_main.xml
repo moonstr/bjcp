@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x64"
+        android:padding="@dimen/x8"
+        android:background="@color/main_yellow"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/lottery"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/lottery_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:checked="true"
+            android:text="开奖信息"
+            android:textColor="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/hot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:drawableTop="@drawable/hot_selector"
+            android:button="@null"
+            android:text="热门资讯"
+            android:textColor="@color/white"/>
+        <RadioButton
+            android:id="@+id/win"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ssc_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="时时彩"
+            android:textColor="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/ssc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/win_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="中奖资讯"
+            android:textColor="@color/white"/>
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.bjke.project1.view.TitleView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mTitle="基本走势"
+        />
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x32">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"></LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x32"
+        android:layout_weight="0.5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/x80"
+            android:layout_height="match_parent"
+            android:background="@color/orange"
+            android:gravity="center"
+            android:text="期号"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="#aaddbb"
+            android:orientation="horizontal">
+
+            <com.bjke.project1.view.lotterytrend.HeaderHorizontalScrollView
+                android:id="@+id/trend_header_scroll"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.bjke.project1.view.lotterytrend.HeadCustomGridView
+                        android:id="@+id/grid_trend_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </com.bjke.project1.view.lotterytrend.HeaderHorizontalScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="8"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <com.bjke.project1.view.lotterytrend.LeftNumberSynchScrollView
+                android:id="@+id/scroll_left"
+                android:layout_width="80dp"
+                android:layout_height="fill_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <com.bjke.project1.view.lotterytrend.LeftNumberCustomListView
+                        android:id="@+id/lv_number"
+                        android:layout_width="80dp"
+                        android:layout_height="fill_parent" />
+                </LinearLayout>
+            </com.bjke.project1.view.lotterytrend.LeftNumberSynchScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <com.bjke.project1.view.lotterytrend.TrendScrollViewWidget
+                android:id="@+id/scroll_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="none">
+
+                <com.bjke.project1.view.lotterytrend.TrendView
+                    android:id="@+id/trend_view_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+            </com.bjke.project1.view.lotterytrend.TrendScrollViewWidget>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

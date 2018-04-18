@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.bjke.project1.view.TitleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mShowLeft="false"
+        app:mTitle="开奖信息" />
+
+    <com.bjke.project1.view.CircleMenuLayout
+        android:id="@+id/id_menulayout"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/circle_menu_bg">
+
+        <RelativeLayout
+            android:id="@id/id_circle_menu_item_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true"
+                app:border_color="@android:color/white"
+                app:border_width="5dp" />
+
+        </RelativeLayout>
+
+    </com.bjke.project1.view.CircleMenuLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</LinearLayout>
