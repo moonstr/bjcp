@@ -12,6 +12,12 @@
         app:mShowLeft="false"
         app:mTitle="开奖信息" />
 
+    <com.bjke.project1.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x160"
+        />
+
     <com.bjke.project1.view.CircleMenuLayout
         android:id="@+id/id_menulayout"
 

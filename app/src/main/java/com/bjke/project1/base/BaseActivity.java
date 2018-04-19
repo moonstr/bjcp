@@ -1,11 +1,14 @@
 package com.bjke.project1.base;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import com.bjke.project1.R;
 import com.bjke.project1.view.ComProgressDialog;
+import com.bjkj.library.utils.StatusBarUtil;
 
 /**
  * Created by liyou on 2018/3/28.
@@ -22,9 +25,12 @@ public abstract class BaseActivity extends AppCompatActivity {
         initView();
         initData();
         initListener();
+        setStatusBar();
     }
     public abstract int getLayoutId();
-
+    protected void setStatusBar() {
+        StatusBarUtil.setColor(this, Color.parseColor("#FFAD01"));
+    }
     @Override
     public void onResume() {
         super.onResume();

@@ -1,22 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/x16"
+    android:gravity="center_vertical"
     >
 
-   <TextView
-       android:id="@+id/title"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="第2018034期  2018-03-27"/>
-    <LinearLayout
-        android:id="@+id/ll"
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/x8">
 
+    <ImageView
+        android:id="@+id/imag"
+        android:layout_width="@dimen/x32"
+        android:layout_height="@dimen/x32"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x8"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="第 "/>
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="第2018034期  2018-03-27"
+                android:textColor="@color/main_purple"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 期"/>
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/x32"
+                android:gravity="end"
+                android:text=" ..."/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x8">
+
+        </LinearLayout>
     </LinearLayout>
+
+
 
 </LinearLayout>

@@ -14,6 +14,7 @@ import com.bjke.project1.bean.LotteryBean;
 import com.bjke.project1.modle.LotteryModle;
 import com.bjke.project1.view.TitleView;
 import com.bjkj.library.okhttp.HttpCallBack;
+import com.bjkj.library.utils.StatusBarUtil;
 
 /**
  * Created by liyou on 2018/3/28.
@@ -42,7 +43,7 @@ public class LotteryActivity extends BaseActivity {
         super.initData();
         showLoadingDialog("");
         type = getIntent().getIntExtra("type",-1);
-        adapter = new LotterAdapter(LotteryActivity.this,bean);
+        adapter = new LotterAdapter(LotteryActivity.this,type,bean);
         mTitle.setTitle(strs[type]+"历史开奖");
         mList.setAdapter(adapter);
 
@@ -58,6 +59,11 @@ public class LotteryActivity extends BaseActivity {
                 hideLoadingDialog();
             }
         });
+    }
+
+    @Override
+    protected void setStatusBar() {
+        super.setStatusBar();
     }
 
     @Override

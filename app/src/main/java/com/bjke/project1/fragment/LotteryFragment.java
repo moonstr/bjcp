@@ -12,8 +12,12 @@ import android.widget.TextView;
 
 import com.bjke.project1.R;
 import com.bjke.project1.activity.LotteryActivity;
+import com.bjke.project1.banner.Banner;
+import com.bjke.project1.banner.GlideImageLoader;
 import com.bjke.project1.base.BaseFragment;
 import com.bjke.project1.view.CircleMenuLayout;
+
+import java.util.ArrayList;
 
 /**
  * Created by liyou on 2018/3/29.
@@ -21,15 +25,13 @@ import com.bjke.project1.view.CircleMenuLayout;
 
 public class LotteryFragment extends BaseFragment {
     ListView mList;
+    Banner banner;
     TypeAdapter adapter;
     CircleMenuLayout mCircleMenuLayout;
 //    private TextView mTitle;
     String[] strs=new String[]{"双色球","大乐透","福彩3D","排列三","排列五","七星彩"};
     int[] imags=new int[]{R.mipmap.ssq,R.mipmap.dlt,R.mipmap.fc3d,R.mipmap.pl3,R.mipmap.pl5,R.mipmap.qxc};
-//int[] imags=new int[]{R.mipmap.share_friend,
-//        R.mipmap.share_qq, R.mipmap.share_qzone,
-//        R.mipmap.share_morepics, R.mipmap.share_wechat,
-//        R.mipmap.share_weibo};
+    ArrayList arrayList = new ArrayList();
     @Override
     public int getContentViewLayoutId() {
         return R.layout.fragment_lottery;
@@ -40,6 +42,7 @@ public class LotteryFragment extends BaseFragment {
 //        mTitle = findViewById(R.id.title);
         mList=findViewById(R.id.list);
         mCircleMenuLayout = (CircleMenuLayout) findViewById(R.id.id_menulayout);
+        banner = findViewById(R.id.banner);
     }
 
     @Override
@@ -47,6 +50,15 @@ public class LotteryFragment extends BaseFragment {
         mCircleMenuLayout.setMenuItemIconsAndTexts(imags,strs);
         adapter=new TypeAdapter(strs);
         mList.setAdapter(adapter);
+        //简单使用
+//        for (int i=0;i<imags.length;i++){
+//            arrayList.add(imags[i]);
+//        }
+        arrayList.add(R.mipmap.banner1);
+        arrayList.add(R.mipmap.banner2);
+        banner.setImages(arrayList)
+                .setImageLoader(new GlideImageLoader())
+                .start();
     }
 
     @Override

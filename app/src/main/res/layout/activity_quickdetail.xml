@@ -18,8 +18,10 @@
         android:layout_height="wrap_content"
         android:paddingBottom="@dimen/x16"
         android:paddingLeft="@dimen/x8"
+        android:paddingRight="@dimen/x8"
         android:paddingTop="@dimen/x16"
-        android:drawableLeft="@drawable/ssc_rect"
+        android:drawableLeft="@mipmap/search"
+        android:drawableRight="@mipmap/arrow"
         android:drawablePadding="@dimen/x4"
         android:text="开奖查询" />
 
@@ -34,8 +36,10 @@
         android:layout_height="wrap_content"
         android:paddingBottom="@dimen/x16"
         android:paddingLeft="@dimen/x8"
+        android:paddingRight="@dimen/x8"
         android:paddingTop="@dimen/x16"
-        android:drawableLeft="@drawable/ssc_rect"
+        android:drawableLeft="@mipmap/trend"
+        android:drawableRight="@mipmap/arrow"
         android:drawablePadding="@dimen/x4"
         android:text="趋势图" />
 

@@ -3,7 +3,7 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="@dimen/x48"
     android:gravity="center_vertical"
-    android:background="@color/main_yellow">
+    android:background="@mipmap/title_bg">
 
     <ImageView
         android:id="@+id/back"

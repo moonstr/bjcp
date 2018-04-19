@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -21,9 +22,11 @@ import com.bjke.project1.utils.LogUtils;
 public class LotterAdapter extends BaseAdapter{
     LotteryBean bean;
     Activity activity;
-    public LotterAdapter(Activity activity,LotteryBean bean){
+    int type;
+    public LotterAdapter(Activity activity,int type,LotteryBean bean){
         this.activity=activity;
         this.bean=bean;
+        this.type = type;
 
     }
     @Override
@@ -54,13 +57,30 @@ public class LotterAdapter extends BaseAdapter{
             convertView= LayoutInflater.from(activity).inflate(R.layout.item_lottery,null);
             holder.title=convertView.findViewById(R.id.title);
             holder.ll=convertView.findViewById(R.id.ll);
+            holder.imag = convertView.findViewById(R.id.imag);
+            holder.time = convertView.findViewById(R.id.time);
             convertView.setTag(holder);
         }else {
             holder=(ViewHolder)convertView.getTag();
         }
         if (bean!=null){
             if (bean.data!=null){
-                holder.title.setText("第 "+bean.data.get(position).expect+" 期"+"  "+bean.data.get(position).opentime);
+                holder.title.setText(bean.data.get(position).expect);
+                holder.time.setText("  "+bean.data.get(position).opentime);
+
+                if (type==0){
+                   holder.imag.setImageResource(R.mipmap.ssq);
+               }else if (type==1){
+                   holder.imag.setImageResource(R.mipmap.dlt);
+               }else if (type==2){
+                   holder.imag.setImageResource(R.mipmap.fc3d);
+               }else if (type==3){
+                   holder.imag.setImageResource(R.mipmap.pl3);
+               }else if (type==4){
+                   holder.imag.setImageResource(R.mipmap.pl5);
+               }else if (type==5){
+                   holder.imag.setImageResource(R.mipmap.qxc);
+               }
                 String data=bean.data.get(position).opencode;
                 String[] codes=data.split("\\+");
                 holder.ll.removeAllViews();
@@ -71,16 +91,16 @@ public class LotterAdapter extends BaseAdapter{
                     for (int j =0;j<strs.length;j++){
                         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
                                 LinearLayout.LayoutParams.WRAP_CONTENT);
-//                        if (holder.ll.getChildCount()!=0){
+                        if (holder.ll.getChildCount()!=0){
                             layoutParams.leftMargin=(int)activity.getResources().getDimension(R.dimen.x16);
-//                        }
+                        }
                         TextView textView = new TextView(activity);
                         textView.setTextSize(12);
                         textView.setTextColor(Color.WHITE);
                         if (i!=0){
-                            textView.setBackgroundResource(R.drawable.circle_red);
+                            textView.setBackgroundResource(R.drawable.circle_purple);
                         }else {
-                            textView.setBackgroundResource(R.drawable.circle_blue);
+                            textView.setBackgroundResource(R.drawable.circle_green);
                         }
 
                         textView.setText(strs[j]);
@@ -103,6 +123,8 @@ public class LotterAdapter extends BaseAdapter{
     class ViewHolder{
         TextView title;
         LinearLayout ll;
+        ImageView imag;
+        TextView time;
         TextView textView1;
         TextView textView2;
         TextView textView3;

@@ -62,7 +62,7 @@ public class WinFragment extends BaseFragment {
         @Override
         public void onPageFinished(WebView webView, String s) {
             super.onPageFinished(webView, s);
-            String str = "javascript:var adDiv=document.getElementsByClassName('top-header')[0];adDiv.style.backgroundColor='#f39800';";
+            String str = "javascript:var adDiv=document.getElementsByClassName('top-header')[0];adDiv.style.backgroundColor='#FFAD01';";
 //            mWebView.loadUrl( str);
             mWebView.evaluateJavascript(str, new ValueCallback<String>() {
                 @Override
